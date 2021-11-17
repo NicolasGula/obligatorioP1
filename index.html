@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/clases.js"></script>
+    <script src="./js/codigo.js"></script>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <!------------------------------------------------ CSS Bootstrap5 ------------------------------------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>OBLIGATORIO</title>
+</head>
+
+<body class="text-center">
+
+    <!--!-------------------------------------------------------------INGRESO  A LA APLICACION---------------------------------------------------->
+
+    <div class="form-signin " id="ingreso">
+        <form id="formularioIngreso">
+            <img class="mb-3" src="logo.jpg" alt="" width="180" height="150">
+            <h1 class="mb-3 ">INGRESAR</h1>
+            <div class="form-floating">
+                <div class="mb-3">
+                    <label for="perfil">ELEGIR PERFIL</label>
+                    <select class="form-select" name="perfil" id="perfil">
+                        <option value="administrador">ADMINISTRADOR</option>
+                        <option value="empresa">EMPRESA</option>
+                        <option value="persona">PERSONA</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-floating">
+                <input type="text" id="nombreUsuario" placeholder="NOMBRE DE USUARIO" class="form-control">
+                <label for="nombreUsuario">NOMBRE DE USUARIO</label>
+            </div>
+
+            <div class="form-floating">
+                <input type="password" id="contraseñaUsuario" placeholder="Contrasena" class="form-control">
+                <label for="contraseñaUsuario">CONTRASENA</label>
+            </div>
+
+            <input id="btnIngreso" class="w-100 btn btn-lg btn-primary" type="button" value="INGRESAR">
+            <h4 class="mt-4 mb-3 text-black">AUN NO ESTAS REGISTRADO ?</h4>
+
+            <div class="row">
+                <div class="col">
+                    <input id="btnHaciaRegistroEmpresa" type="button" class="btn btn-outline-primary"
+                        style="text-decoration: none;" value="REGISTRO EMPRESA">
+                </div>
+
+                <div class="col">
+                    <input id="btnHaciaRegistroPersona" type="button" class="btn btn-outline-primary"
+                        style="text-decoration: none;" value="REGISTRO PERSONA">
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+    <!--!-------------------------------------------------------------REGISTRO PERSONA ---------------------------------------------------->
+
+    <div class=" form-signin text-center" id="registroPersona">
+        <form id="formularioPersona">
+            <h1 class="h3 mb-3">REGISTRARSE</h1>
+
+            <div class="form-floating">
+                <input type="text" id="cedula" placeholder="C.I." class="form-control" required>
+                <label for="cedula">CEDULA DE IDENTIDAD</label>
+            </div>
+
+            <div class="form-floating">
+                <input type="text" id="nombre" placeholder="NOMBRE" class="form-control" required>
+                <label for="nombre">NOMBRE</label>
+            </div>
+
+            <div class="form-floating">
+                <input type="text" id="apellido" placeholder="APELLIDO" class="form-control" required>
+                <label for="apellido">APELLIDO</label>
+            </div>
+
+            <div class="form-floating">
+                <input type="text" id="nombreUsuarioPersona" placeholder="NOMBRE DE USUARIO" class="form-control"
+                    required>
+                <label for="nombreUsuarioPersona">NOMBRE DE USUARIO</label>
+            </div>
+
+            <div class="form-floating">
+                <input type="password" id="contraseñaPersona" placeholder="Contrasena" class="form-control" required>
+                <label for="contraseñaPersona">CONTRASENA</label>
+            </div>
+
+            <input type="button" id="btnRegistroPersona" value="REGISTRARME" class="w-100 btn btn-primary">
+
+            <p class="mt-5 mb-3 text-black">
+                <input id="btnHaciaIngresoDesdePersona" type="button" class="btn btn-outline-primary"
+                    style="text-decoration: none;" value="INGRESAR">
+            </p>
+        </form>
+    </div>
+
+
+
+    <!--!-------------------------------------------------------------REGISTRO EMPRESA ---------------------------------------------------->
+    <div class=" form-signin text-center" id="registroEmpresa">
+        <form id="formularioEmpresa">
+            <h1 class="h3 mb-3">REGISTRARSE</h1>
+
+            <div class="form-floating">
+                <input type="number" id="rut" placeholder="RUT" class="form-control">
+                <label for="rut">RUT</label>
+            </div>
+
+            <div class="form-floating">
+                <input type="text" id="razonSocial" placeholder="RAZON SOCIAL" class="form-control">
+                <label for="razonSocial">RAZON SOCIAL</label>
+            </div>
+
+            <div class="form-floating">
+                <input type="text" id="nombreEmpresa" placeholder="NOMBRE EMPRESA" class="form-control">
+                <label for="nombreEmpresa">NOMBRE DE LA EMPRESA</label>
+            </div>
+
+            <div class="form-floating">
+                <input type="text" id="nombreUsuarioEmpresa" placeholder="NOMBRE DE USUARIO" class="form-control">
+                <label for="nombreUsuarioEmpresa">NOMBRE DE USUARIO</label>
+            </div>
+
+            <div class="form-floating">
+                <input type="password" id="contraseñaEmpresa" placeholder="Contraseña" class="form-control">
+                <label for="contrasena">CONTRASENA</label>
+            </div>
+
+            <div class="form-floating">
+                <div class="mb-3">
+                    <label for="vehiculos" class="form-label">TIPO DE VEHICULO</label>
+                    <select name="vehiculos" id="vehiculos" class="form-select">
+                    </select>
+                </div>
+            </div>
+
+            <input type="button" id="btnRegistroEmpresa" value="REGISTRARME" class="w-100 btn btn-primary">
+
+            <p class="mt-5 mb-3 text-black">
+                <input id="btnHaciaIngresoDesdeEmpresa" type="button" class="btnHaciaIngreso btn btn-outline-primary"
+                    style="text-decoration: none;" value="INGRESAR">
+            </p>
+        </form>
+    </div>
+
+
+
+    <!--!-------------------------------------------------------------ADMINISTRADOR ---------------------------------------------------->
+    <div id="administrador" class="administrador-style">
+        <div id=" barraNavegacionAdministrador" class="text-center">
+            <nav class="py-2 bg-light border-bottom">
+                <div class="container d-flex flex-wrap">
+                    <a class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
+                        <img class="mb-2" src="logo.jpg" alt="" width="100" height="90">
+                        <span class="fs-4">BIENVENIDO ADMINISTRADOR</span>
+                    </a>
+                    <ul class="nav">
+                        <li class="nav-item align-self-center"><input id="btnSalirDeAdministrador" type="button"
+                                class="btn btn-outline-danger " value="SALIR!"></li>
+                    </ul>
+                </div>
+            </nav>
+            <header class="py-3 mb-4 border-bottom">
+                <div class="container d-flex flex-wrap justify-content-center">
+                    <ul class="nav me-auto">
+                        <div class="btn-toolbar">
+                            <input id="btnEmpresasAdministrador" type="button" value="EMPRESAS"
+                                class="btn btn-outline-primary mx-2">
+                            <input type="button" id="btnVehiculosAdministrador" value="VEHICULOS"
+                                class="btn btn-outline-primary mx-2">
+                            <input type="button" id="btnEstadisticasAdministrador" value="ESTADISTICAS"
+                                class="btn btn-outline-primary mx-2">
+                        </div>
+                    </ul>
+
+                    <form class="d-flex">
+                        <input type="search" id="buscarEmpresa" class="form-control me-2" placeholder="BUSCAR EMPRESAS">
+                    </form>
+                </div>
+            </header>
+
+            <div class="container text-center" id="tablaAdministrador">
+            </div>
+
+            <br>
+
+            <div class="container text-center" id="ingresoVehiculos">
+                <h2 class="mb-3">INGRESO DE VEHICULOS</h2>
+                <input type="text" id="ingresarNuevoVehiculo" class="form-control me-2" placeholder="INGRESAR"><br>
+                <input type="button" id="ingresarVehiculo" value="INGRESAR" class="w-100 btn btn-primary">
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--!-------------------------------------------------------------PERSONA ---------------------------------------------------->
+
+    <div id="persona" class="persona-style">
+        <div id=" barraNavegacionPersona" class="text-center">
+            <nav class="py-2 bg-light border-bottom">
+                <div class="container d-flex flex-wrap">
+                    <a class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
+                        <img class="mb-2" src="logo.jpg" alt="" width="100" height="90">
+                        <span class="fs-4">BIENVENIDO <span id="nombrePersonaActual" class="fs-4"> </span></span>
+                    </a>
+                    <ul class="nav">
+                        <li class="nav-item align-self-center"><input id="btnSalirDePersona" type="button"
+                                class="btn btn-outline-danger " value="SALIR!"></li>
+                    </ul>
+                </div>
+            </nav>
+            <header class="py-3 mb-4 border-bottom">
+                <div class="container d-flex flex-wrap justify-content-center">
+                    <ul class="nav me-auto">
+                        <div class="btn-toolbar">
+                            <input id="btnFormularioEnvio" type="button" value="SOLICITAR ENVIO"
+                                class="btn btn-outline-primary mx-2">
+                            <input type="button" id="btnMisSolicitudes" value="MIS SOLICITUDES"
+                                class="btn btn-outline-primary mx-2">
+                            <input type="button" id="btnEstadisticasPersona" value="ESTADISTICAS"
+                                class="btn btn-outline-primary mx-2">
+                        </div>
+                    </ul>
+                </div>
+            </header>
+        </div>
+
+        <div class="container  justify-content-center" id="tablaPersona">
+        </div>
+
+
+
+        <!-- !FORMULARIO SOLICITUD DE ENVIO -->
+        <div id="solicitudEnvios">
+            <form id="formularioEnvios">
+
+                <div class="mb-3">
+                    <label for="distancia" class="form-label">DISTANCIA (EN KILOMETROS)</label>
+                    <input type="number" id="distancia" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="vehiculoEnvio" class="form-label">TIPO DE VEHICULO</label>
+                    <select name="vehiculoEnvio" id="vehiculoEnvio" class="form-select" required>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="descripcion" class="form-label">DESCRIPCION</label>
+                    <textarea id="descripcion" rows="5" class="form-control" required></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="foto" class="form-label">FOTO DE LA MERCADERIA A TRASLADAR</label>
+                    <input type="file" id="foto" class="form-control">
+                </div>
+
+                <img id="mostrarImagen"></img>
+                <br>
+
+                <input type="button" id="btnSolicitarEnvio" class="btn btn-primary" value="SOLICITAR ENVIO">
+
+            </form>
+        </div>
+    </div>
+
+
+
+    <!--!-------------------------------------------------------------EMPRESA---------------------------------------------------->
+
+    <div id="empresa" class="empresa-style">
+        <nav class="py-2 bg-light border-bottom">
+            <div class="container d-flex flex-wrap">
+                <a class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
+                    <img class="mb-2" src="logo.jpg" alt="" width="100" height="90">
+                    <span class="fs-4">BIENVENIDO <span id="nombreEmpresaActual" class="fs-4"> </span></span>
+                </a>
+                <ul class="nav">
+                    <li class="nav-item align-self-center"><input id="btnSalirDeEmpresa" type="button" value="SALIR"
+                            class="btn btn-outline-danger"></li>
+                </ul>
+            </div>
+        </nav>
+        <header class="py-3 mb-4 border-bottom">
+            <div class="container d-flex flex-wrap justify-content-center">
+                <ul class="nav me-auto">
+                    <div class="btn-toolbar">
+                        <input id="btnSolicitudesDisponibles" type="button" value="ENVIOS DISPONIBLES"
+                            class="btn btn-outline-primary mx-2">
+                        <input type="button" id="btnSolicitudesTomadas" value="SOLICITUDES TOMADAS"
+                            class="btn btn-outline-primary mx-2">
+                        <input type="button" id="btnEstadisticasEmpresa" value="ESTADISTICAS"
+                            class="btn btn-outline-primary mx-2">
+                    </div>
+                </ul>
+            </div>
+        </header>
+
+        <div class="container text-center" id="tablaEmpresa">
+        </div>
+
+        <div id="estadisticasEmpresa" class="mb-3 empresa-style">
+            <div class="fs-4">CLIENTE/S CON MAS TRASLADOS :
+                <div class="fs-4" id="clienteConMasTraslados">
+                </div>
+            </div>
+            <br>
+
+            <label for="cantidadEnvios" class="form-label">CANTIDAD DE ENVIOS POR ESTADO</label>
+            <select name="cantidadEnvios" id="cantidadEnvios" class="form-select">
+                <option value="NADA">ELIGE UN ESTADO</option>
+                <option value="EN TRANSITO">EN TRANSITO</option>
+                <option value="FINALIZADA">FINALIZADA</option>
+            </select>
+            <br>
+            <h2 id="resultadoEstados"></h2>
+        </div>
+    </div>
+    </div>
+
+    <!------------------------------------------------ JS Bootstrap5 ------------------------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

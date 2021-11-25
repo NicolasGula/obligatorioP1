@@ -635,7 +635,7 @@ function crearTablaDeSolicitudesTomadas(_usuario) {
     }
     //Si no se asigno ningun envio a si misma, se le informa.
     if (fila == "") {
-        tabla += `<tr> <td colspan="6">${mensaje}</td></tr> `;
+        tabla += `<tr><td colspan="6">${mensaje}</td></tr>`;
     }
     tabla += `</table> `;
     return tabla;

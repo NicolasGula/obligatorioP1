@@ -546,6 +546,7 @@ function crearTablaDeSolicitudesDisponibles(_usuario) {
                         <th>DISTANCIA</th>
                         <th>NOMBRE</th>
                         <th>APELLIDO</th>
+                        <th>DESCRIPCION</th>
                         <th>ESTADO DEL ENVIO</th>
                     </tr>
             </thead > `;
@@ -556,6 +557,7 @@ function crearTablaDeSolicitudesDisponibles(_usuario) {
             <td>${solicitud.distancia}</td>
             <td>${solicitud.usuario.nombre}</td>
             <td>${solicitud.usuario.apellido}</td>
+            <td>${solicitud.descripcion}</td>
             <td><input type="button" class="btnEstado btn btn-warning" value="TOMAR ENVIO"></td>
             </tr>`;//Boton de tomar envio en color amarillo
             tabla += fila;
@@ -606,6 +608,7 @@ function crearTablaDeSolicitudesTomadas(_usuario) {
                         <th>DISTANCIA</th>
                         <th>NOMBRE</th>
                         <th>APELLIDO</th>
+                        <th>DESCRIPCION</th>
                         <th>ESTADO DEL ENVIO</th>
                     </tr>
             </thead > `;
@@ -615,7 +618,8 @@ function crearTablaDeSolicitudesTomadas(_usuario) {
             <td><img src="productos/${solicitud.foto}"  width="100" height="90""></td>
             <td>${solicitud.distancia}</td>
             <td>${solicitud.usuario.nombre}</td>
-            <td>${solicitud.usuario.apellido}</td>`;
+            <td>${solicitud.usuario.apellido}</td>
+            <td>${solicitud.descripcion}</td>`;
             if (solicitud.estado == "EN TRANSITO") {
                 //Si el estado de la solicitud es en transito, el boton sera de color celeste.
                 fila += `<td> <input type="button" class="btnTomadas btn btn-info" value="${solicitud.estado}"></td></tr> `;

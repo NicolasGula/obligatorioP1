@@ -567,7 +567,7 @@ function crearTablaDeSolicitudesDisponibles(_usuario) {
     }
     //Si 'fila' esta vacia, significa que no hay solicitudes con el mismo tipo de vehiculo que la empresa posee y se le informa.
     if (fila == "") {
-        tabla += `<tr><td colspan="5">${mensaje}</td></tr>`;
+        tabla += `<tr><td colspan="6">${mensaje}</td></tr>`;
     }
     tabla += `</table > `;
     return tabla;
@@ -635,7 +635,7 @@ function crearTablaDeSolicitudesTomadas(_usuario) {
     }
     //Si no se asigno ningun envio a si misma, se le informa.
     if (fila == "") {
-        tabla += `<tr> <td colspan="5">${mensaje}</td></tr> `;
+        tabla += `<tr> <td colspan="6">${mensaje}</td></tr> `;
     }
     tabla += `</table> `;
     return tabla;
